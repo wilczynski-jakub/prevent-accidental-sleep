@@ -13,29 +13,29 @@ Make sure you have [Tasker](https://play.google.com/store/apps/details?id=net.di
 ## Main project files
 
 
-### [.prf.xml](.prf.xml)
-It is a Tasker ***Profile*** that initializes the _%DISPLAY_OFF_TIME_ variable - each evening, in order to activate the [Prevent accidental sleep Profile](.prf.xml).
+### [Next_evening_Display_off_time.prf.xml](tasker/Next_evening_Display_off_time.prf.xml)
+It is a Tasker ***Profile*** that initializes the _%DISPLAY_OFF_TIME_ variable - each evening, in order to activate the [Prevent accidental sleep Profile](tasker/Prevent_accidental_sleep.prf.xml).
 
 #### ![Variable Profile 1](screenshots/variable-profile-1.png)
 ![Variable Profile 2](screenshots/variable-profile-2.png)
 
 
-### [.prf.xml](.prf.xml)
-It is a Tasker ***Profile*** that runs the [Prevent accidental sleep Task](.tsk.xml) each 2 minutes in the evening, when the _%DISPLAY_OFF_TIME_ variable is initialized (assuming that the variable is cleared once you've gone to sleep *intentionally*).
+### [Prevent_accidental_sleep.prf.xml](tasker/Prevent_accidental_sleep.prf.xml)
+It is a Tasker ***Profile*** that runs the [Prevent accidental sleep Task](tasker/Prevent_accidental_sleep.tsk.xml) each 2 minutes in the evening, when the _%DISPLAY_OFF_TIME_ variable is initialized (assuming that the variable is cleared once you've gone to sleep *intentionally*).
 
 #### ![Main Profile](screenshots/main-profile.png)
 
 
-### [.tsk.xml](.tsk.xml)
+### [Prevent_accidental_sleep.tsk.xml](tasker/Prevent_accidental_sleep.tsk.xml)
 
 This is the main project task, that calculates for how long the phone has been locked but only when you're at your home location. It assumes that having it locked for more than _%MAX_DISP_OFF_TIME_ minutes (at home, in the evening) means you're falling asleep *unintentionally*.
 
 #### ![Main Task](screenshots/main-task.png)
 
-Once the *accidental sleep* is detected, the [Evening Routine Task](.tsk.xml) is run.
+Once the *accidental sleep* is detected, the [Evening Routine Task](tasker/Evening_routine.tsk.xml) is run.
 
 
-### [.tsk.xml](.tsk.xml)
+### [Evening_routine.tsk.xml](tasker/Evening_routine.tsk.xml)
 
 The Evening Routine Task might perform any custom actions. In this example, it asks you to:
 * set a wake up alarm,
@@ -50,14 +50,14 @@ The Evening Routine Task might perform any custom actions. In this example, it a
 ## Helper tasks
 
 
-### [Task_1.tsk.xml](Task_1.tsk.xml)
+### [Insert_Morning_Routine.tsk.xml](tasker/Insert_Morning_Routine.tsk.xml)
 
 Inserts an event called "Morning Routine" for a chosen time.
 
 #### ![Morning Routine](screenshots/morning-routine.png)
 
 
-### [Task_2.tsk.xml](Task_2.tsk.xml) + [Task 1](sdvsd.xml)
+### [Mins_from__TIME__to__par1_.tsk.xml](tasker/Mins_from__TIME__to__par1_.tsk.xml) + [Mins_from__TIME__to__par1_par2_.tsk.xml](tasker/Mins_from__TIME__to__par1_par2_.tsk.xml)
 
 These tasks the amount of minutes between 2 times, because the result is needed in some Tasker's built functions.
 
