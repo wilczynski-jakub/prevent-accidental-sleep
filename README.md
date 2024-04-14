@@ -28,7 +28,7 @@ It is a Tasker ***Profile*** that runs the [Prevent accidental sleep Task](.tsk.
 
 ### [.tsk.xml](.tsk.xml)
 
-This is the main project task, that calculates for how long the phone has been locked but only when you're at your home location. It assumes that having it locked for more than _%MAX_DISP_OFF_TIME minutes (at home, in the evening) means you're falling asleep *unintentionally*.
+This is the main project task, that calculates for how long the phone has been locked but only when you're at your home location. It assumes that having it locked for more than _%MAX_DISP_OFF_TIME_ minutes (at home, in the evening) means you're falling asleep *unintentionally*.
 
 #### ![Main Task](screenshots/main-task.png)
 
