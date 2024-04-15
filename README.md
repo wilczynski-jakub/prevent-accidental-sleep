@@ -37,12 +37,14 @@ Once the *accidental sleep* is detected, the [Evening Routine Task](tasker/Eveni
 
 ### [Evening_routine.tsk.xml](tasker/Evening_routine.tsk.xml)
 
-The Evening Routine Task might perform any custom actions. In this example, it asks you to:
-* set a wake up alarm,
-* brush your teeth.
+The Evening Routine Task might perform any custom actions. In this example:
+* plays a sound to wake you up,
+* asks you to set a wake up alarm,
+* asks you to brush your teeth.
 
 #### ![Evening Routine 1](screenshots/evening-routine.png)
 ![Evening Routine 2](screenshots/set-wake-up.png)
+<br><br>
 ![Evening Routine 3](screenshots/evening-teeth.png)
 
 
