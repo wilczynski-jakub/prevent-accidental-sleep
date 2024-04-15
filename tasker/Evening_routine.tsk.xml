@@ -1,0 +1,242 @@
+<TaskerData sr="" dvi="1" tv="6.1.32">
+	<Task sr="task70">
+		<cdate>1702552794018</cdate>
+		<edate>1713196330686</edate>
+		<id>70</id>
+		<nme>Evening routine</nme>
+		<pri>100</pri>
+		<rty>1</rty>
+		<Action sr="act0" ve="7">
+			<code>171</code>
+			<label>Play a sound to wake you up</label>
+			<Int sr="arg0">
+				<var>2000</var>
+			</Int>
+			<Int sr="arg1" val="1000"/>
+			<Int sr="arg2" val="50"/>
+			<Int sr="arg3" val="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>378</code>
+			<label>Could be an input dialog too, but the list can be used more quickly</label>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_long
+Long
+true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%ld_selected_index
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg13" ve="3"/>
+			<Str sr="arg2" ve="3">Wake up time:</Str>
+			<Str sr="arg3" ve="3">6:00,6:15,6:30,6:45,7:00,7:15,7:30,7:45,8:00,8:15,8:30,8:45,9:00,9:15,9:30,9:45,10:00,10:15,10:30,10:45,11:00,11:15,11:30,11:45,12:00</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="100"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>547</code>
+			<label>To make sure the evening routine is properly done</label>
+			<Str sr="arg0" ve="3">%MESSAGE</Str>
+			<Str sr="arg1" ve="3">I promise to have brushed my teeth.</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>360</code>
+			<label>You will have to type the %MESSAGE to end it</label>
+			<se>false</se>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%input
+Input
+The text that was inserted in the dialog&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">%MESSAGE</Str>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Int sr="arg4" val="30"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Str sr="arg8" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>135</code>
+			<label>Repeat if what you wrote isn't the same as %MESSAGE</label>
+			<Int sr="arg0" val="1"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">You will have to type the %MESSAGE to end it</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%input</lhs>
+					<op>3</op>
+					<rhs>%MESSAGE</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>126</code>
+			<label>If it is though, the task has been properly finished</label>
+			<Str sr="arg0" ve="3">true</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%input</lhs>
+					<op>2</op>
+					<rhs>%MESSAGE</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>135</code>
+			<label>Repeat the sound if no response</label>
+			<Int sr="arg0" val="0"/>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected</lhs>
+					<op>13</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>597</code>
+			<label>%hour (when below 10)</label>
+			<Str sr="arg0" ve="3">%ld_selected</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%hour</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected_index</lhs>
+					<op>6</op>
+					<rhs>17</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>597</code>
+			<label>%hour (when above 9)</label>
+			<Str sr="arg0" ve="3">%ld_selected</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="2"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%hour</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected_index</lhs>
+					<op>7</op>
+					<rhs>16</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>597</code>
+			<label>%mins (when %hour below 10)</label>
+			<Str sr="arg0" ve="3">%ld_selected</Str>
+			<Int sr="arg1" val="3"/>
+			<Int sr="arg2" val="2"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%mins</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected_index</lhs>
+					<op>6</op>
+					<rhs>17</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>597</code>
+			<label>%mins (when %hour above 9)</label>
+			<Str sr="arg0" ve="3">%ld_selected</Str>
+			<Int sr="arg1" val="4"/>
+			<Int sr="arg2" val="2"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">%mins</Str>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%ld_selected_index</lhs>
+					<op>7</op>
+					<rhs>16</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>130</code>
+			<label>Insert a Morning Routine calendar event for the selected time</label>
+			<Str sr="arg0" ve="3">Insert Morning Routine</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1"/>
+			<Str sr="arg2" ve="3">%hour</Str>
+			<Str sr="arg3" ve="3">%mins</Str>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>566</code>
+			<label>Set a wake up alarm for the selected time</label>
+			<Int sr="arg0">
+				<var>%hour</var>
+			</Int>
+			<Int sr="arg1">
+				<var>%mins</var>
+			</Int>
+			<Str sr="arg2" ve="3">Wake up</Str>
+			<Str sr="arg3" ve="3"/>
+			<Int sr="arg4" val="1"/>
+			<Int sr="arg5" val="0"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>523</code>
+			<label>The notification can be used by e.g. Google Assistant for more actions</label>
+			<Str sr="arg0" ve="3">-good--night-</Str>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3"/>
+			<Img sr="arg2" ve="2">
+				<nme>mw_av_volume_off</nme>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+	</Task>
+</TaskerData>
